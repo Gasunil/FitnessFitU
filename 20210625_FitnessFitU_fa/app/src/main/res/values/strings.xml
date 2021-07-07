@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">FitnessFitU</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="tags">tags</string>
-    <string name="signup_here">Signup here</string>
-</resources>
