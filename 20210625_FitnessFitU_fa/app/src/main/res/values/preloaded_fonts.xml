@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/adamina</item>
+        <item>@font/alegreya_sans_thin</item>
+        <item>@font/allerta</item>
+        <item>@font/amiko_bold</item>
+        <item>@font/asap_bold</item>
+        <item>@font/basic</item>
+        <item>@font/cabin_semibold</item>
+        <item>@font/catamaran_thin</item>
+        <item>@font/palanquin_bold</item>
+        <item>@font/pavanam</item>
+        <item>@font/play_bold</item>
+        <item>@font/poppins_bold</item>
+        <item>@font/press_start_2p</item>
+        <item>@font/prompt_bold</item>
+        <item>@font/pt_sans_bold</item>
+        <item>@font/quantico_bold</item>
+        <item>@font/quicksand_bold</item>
+        <item>@font/source_code_pro_bold</item>
+        <item>@font/syncopate_bold</item>
+        <item>@font/tauri</item>
+        <item>@font/titillium_web_bold</item>
+        <item>@font/voces</item>
+        <item>@font/work_sans_medium</item>
+        <item>@font/yantramanav_bold</item>
+    </array>
+</resources>
