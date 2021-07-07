@@ -138,6 +138,7 @@ public class JoinActivity extends AppCompatActivity {
                             data[6] = sex;
 
                             PutData putData = new PutData("http://175.205.234.222:81/signup.php", "POST", field, data);
+                            //PutData putData = new PutData("http://192.168.0.16:81/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
 //                                    progressBar.setVisibility(View.GONE);

@@ -125,7 +125,6 @@
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:hint="1RM"
                 android:inputType="text"
                 android:textSize="17sp" />
 

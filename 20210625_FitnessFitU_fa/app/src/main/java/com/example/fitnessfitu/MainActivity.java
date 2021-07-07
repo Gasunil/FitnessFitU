@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         data[0] = phoneID;
                         Log.v("phoneID data :", " ---------------phoneID : " + phoneID);
                         PutData putData = new PutData("http://175.205.234.222:81/login_recordserch.php", "POST", field, data);
+                        //PutData putData = new PutData("http://192.168.0.16:81/signup.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();

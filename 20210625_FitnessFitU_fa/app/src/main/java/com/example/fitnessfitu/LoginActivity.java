@@ -99,6 +99,7 @@ public class LoginActivity extends AppCompatActivity {
                             data[1] = password;
 
                             PutData putData = new PutData("http://175.205.234.222:81/login.php", "POST", field, data);
+                            //PutData putData = new PutData("http://192.168.0.16:81/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
@@ -125,6 +126,7 @@ public class LoginActivity extends AppCompatActivity {
                                             data2[3] = userName;
                                             data2[4] = phoneID;
                                             PutData putData2 = new PutData("http://175.205.234.222:81/login_recordsave.php", "POST", field2, data2);
+                                            //PutData putData2 = new PutData("http://192.168.0.16:81/signup.php", "POST", field, data);
                                             if(putData2.startPut()){
                                                 if(putData2.onComplete()){
                                                     String result2 = putData2.getResult();

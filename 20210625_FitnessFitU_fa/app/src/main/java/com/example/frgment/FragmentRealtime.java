@@ -117,6 +117,7 @@ public class FragmentRealtime extends Fragment {
     //battery
     ProgressBar batteryProgress;
     private int battery;
+    int batterycount = 1000;
 
     @Nullable
     @org.jetbrains.annotations.Nullable
@@ -136,6 +137,7 @@ public class FragmentRealtime extends Fragment {
 
         //battery set
         batteryProgress = view.findViewById(R.id.battery);
+
 
         //목표퍼센트 뷰 60퍼 80퍼 100퍼
         txTarget1 = view.findViewById(R.id.text1);
@@ -172,7 +174,7 @@ public class FragmentRealtime extends Fragment {
                     xAxis.setDrawLabels(false);
 
                     //X축 값 갯수
-                    xAxis.setLabelCount(10, true);
+                    xAxis.setLabelCount(20, true);
 
                     //Y축 설정
                     YAxis yAxis = chart.getAxisLeft();
@@ -308,19 +310,24 @@ public class FragmentRealtime extends Fragment {
 
         //battery set
         battery = RealtimeActivity.batterygauge;
-        batteryProgress.setProgress(battery);//무게 counting
-
-        if (90 <= battery) {
-            batteryProgress.setProgress(90);
-        } else if (65 <= battery && battery < 90) {
-            batteryProgress.setProgress(70);
-        } else if (40 <= battery && battery < 65) {
-            batteryProgress.setProgress(50);
-        } else if (15 <= battery && battery < 40) {
-            batteryProgress.setProgress(30);
-        } else {
-            batteryProgress.setProgress(10);
+        if (batterycount == 1000){
+            batteryProgress.setProgress(battery);//무게 counting
+            Log.e("batterygauge","----------batterygauge : "+battery);
+            batterycount = 0;
+        }else{
+            batterycount++;
         }
+//        if (90 <= battery) {
+//            batteryProgress.setProgress(90);
+//        } else if (65 <= battery && battery < 90) {
+//            batteryProgress.setProgress(70);
+//        } else if (40 <= battery && battery < 65) {
+//            batteryProgress.setProgress(50);
+//        } else if (15 <= battery && battery < 40) {
+//            batteryProgress.setProgress(30);
+//        } else {
+//            batteryProgress.setProgress(10);
+//        }
 
 
         //시간 전달
@@ -373,6 +380,7 @@ public class FragmentRealtime extends Fragment {
                         data[8] = RealtimeActivity.getgoalsetting();
 
                         PutData putData = new PutData("http://175.205.234.222:81/muscleDBsave.php", "POST", field, data);
+                        //PutData putData = new PutData("http://192.168.0.16:81/signup.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();

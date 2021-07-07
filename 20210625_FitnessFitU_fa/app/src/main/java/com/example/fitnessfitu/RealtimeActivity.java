@@ -268,7 +268,7 @@ public class RealtimeActivity<picValue> extends AppCompatActivity {
                         arm.setBackgroundColor(Color.parseColor("#dcdcdc"));
                         colorvalue = 1;
                         goalsetting = "1";
-                        picValue = (float) 100.0;
+                        picValue = (float) 500.0;
                         Log.v("picValue는---------","밸류거ㅏ아아아아아"+picValue);
                         return false;
                     }
@@ -285,7 +285,7 @@ public class RealtimeActivity<picValue> extends AppCompatActivity {
                         leg.setBackgroundColor(Color.parseColor("#dcdcdc"));
                         colorvalue = 1;
                         goalsetting = "2";
-                        picValue = (float) 100.0;
+                        picValue = (float) 500.0;
                         Log.v("picValue는---------","밸류거ㅏ아아아아아"+picValue);
                         return false;
                     }
@@ -302,7 +302,7 @@ public class RealtimeActivity<picValue> extends AppCompatActivity {
                         chest.setBackgroundColor(Color.parseColor("#dcdcdc"));
                         colorvalue = 1;
                         goalsetting = "3";
-                        picValue = (float) 100.0;
+                        picValue = (float) 500.0;
                         Log.v("picValue는---------","밸류거ㅏ아아아아아"+picValue);
                         return false;
                     }
@@ -319,7 +319,7 @@ public class RealtimeActivity<picValue> extends AppCompatActivity {
                         abdominal.setBackgroundColor(Color.parseColor("#dcdcdc"));
                         colorvalue = 1;
                         goalsetting = "4";
-                        picValue = (float) 100.0;
+                        picValue = (float) 500.0;
                         Log.v("picValue는---------","Value : "+picValue);
                         return false;
                     }
@@ -405,13 +405,14 @@ public class RealtimeActivity<picValue> extends AppCompatActivity {
                             Log.v("RealtimeActivity:","Exception e : "+readBody);
                             spvalue = Float.parseFloat(readBody);
                         }catch (Exception y){
-                            readMeshelper =  readBodys[1].split(",");
                             try{
+                                readMeshelper =  readBodys[1].split(",");
                                 readBody = readMeshelper[1].replace("-","");
                                 Log.v("RealtimeActivity:","Exception y : "+readBody);
                                 spvalue = Float.parseFloat(readBody);
                             }catch (Exception x){
                                 try{
+                                    readMeshelper =  readBodys[1].split(",");
                                     readBody = readMeshelper[0].replace("-","");
                                     Log.v("RealtimeActivity:","Exception x : "+readBody);
                                     spvalue = Float.parseFloat(readBody);
